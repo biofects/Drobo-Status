@@ -1,7 +1,7 @@
 ### Drobo-Status
 Drobo Status is a python program that will connect to your Drobo and return JSON data regarding your Drobo. You can then use this data to get real time status from your Drobo. This is only tested on Drobo FS 8 Bay. Please let me know if it works on others. 
 
-#### Donate to get geek stuff(sorry no beer here)
+#### Donate to get me geek stuff(sorry no beer here)
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TWRQVYJWC77E6)
 
