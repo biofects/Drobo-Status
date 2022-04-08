@@ -2,8 +2,6 @@
 
 import struct
 import sys
-from hurry.filesize import size
-from hurry.filesize import alternative
 import json
 import xml.etree.ElementTree as ET
 from socket import (
@@ -91,7 +89,7 @@ class DroboChecker():
                 drive_data = {"sid": int(slot), "status": int(status), "capacity": calc_size(int(dcapacity)) }
                 drive_list.append(drive_data)
             return drive_list
-        drobo_data = '{"name":"' + name + '", "serial": "' + serial + '","firmware-version": "' + firmware + '","disk-total": "' + (size(total_capacity, system=alternative)) + '","disk-used": "' + (size(used_capacity, system=alternative)) + '","disk-free": "' + (size(free_capacity, system=alternative)) + '", "drives": ' + json.dumps(_get_drives(self)) + '}'
+        drobo_data = '{"name":"' + name + '", "serial": "' + serial + '","firmware-version": "' + firmware + '","disk-total": "' + (calc_size(int(total_capacity))) + '","disk-used": "' + (calc_size(int(used_capacity))) + '","disk-free": "' + (calc_size(int(free_capacity))) + '", "drives": ' + json.dumps(_get_drives(self)) + '}'
         return drobo_data
          
 
@@ -103,5 +101,3 @@ def main():
 if __name__ == '__main__':
     main()
     app.run(host='0.0.0.0')
-
-
