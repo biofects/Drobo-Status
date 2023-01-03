@@ -12,8 +12,14 @@ Drobo Status is a python program that will connect to your Drobo and return JSON
 [drobo]
 host = IP of your DROBO
 ```
+#### Update Docker file if needed on line 4
+```
+Please note you can change the TZ to a more specific location listed [Here](https://en.m.wikipedia.org/wiki/List_of_tz_database_time_zones) .
+```
+
+
 3. docker build -t drobo-status:latest .
-4. docker run -d --name drobo-status -p :5000 drobo-status:latest
+4. docker run -d --name drobo-status -p 192.168.1.126:5000:5000 drobo-status:latest
 
 #### In a browser go to host that is running this program on port 5000 I.E.(192.168.1.126:5000)
 You should see output like 
