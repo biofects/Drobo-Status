@@ -12,7 +12,7 @@ Drobo Status is a python program that will connect to your Drobo and return JSON
 [drobo]
 host = IP of your DROBO
 ```
-#### Update Docker file if needed on line 3
+#### Update Docker file if needed on line 4
 ```
 Please note you can change the TZ to a more specific location listed [Here](https://en.m.wikipedia.org/wiki/List_of_tz_database_time_zones) .
 ```
